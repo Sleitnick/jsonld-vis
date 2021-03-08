@@ -33,5 +33,8 @@ node_modules
 # Optional REPL history
 .node_repl_history
 dist/jsonld-vis.js
+dist/index.js
 
 example/bundle.js
+
+.DS_Store

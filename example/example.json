@@ -1,265 +1,46 @@
 {
-  "@id": "http://example.com/article",
-  "@type": "ScholarlyArticle",
-
-  "name": "article title",
-
-  "about": {
-    "@id": "http://id.nlm.nih.gov/mesh/D007251",
-    "@type": "InfectiousDisease",
-    "name": "Influenza, Human",
-    "description": "An acute viral infection in humans involving the respiratory tract. It is marked by inflammation of the NASAL MUCOSA; the PHARYNX; and conjunctiva, and by headache and severe, often generalized, myalgia.",
-    "code": {
-      "@type": "MedicalCode",
-      "codeValue": "D007251",
-      "codingSystem": "MeSH"
+  "@context": {
+    "name": "http://rdf.data-vocabulary.org/#name",
+    "ingredient": "http://rdf.data-vocabulary.org/#ingredients",
+    "yield": "http://rdf.data-vocabulary.org/#yield",
+    "instructions": "http://rdf.data-vocabulary.org/#instructions",
+    "step": {
+      "@id": "http://rdf.data-vocabulary.org/#step",
+      "@type": "xsd:integer"
     },
-    "mainEntityOfPage": {
-      "@id": "#Discussion"
-    }
+    "description": "http://rdf.data-vocabulary.org/#description",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
-
-  "author": {
-    "@type": "ContributorRole",
-
-    "author": {
-      "@id": "http://example.com/peter",
-      "@type": "Person",
-      "affiliation": [
-        {
-          "@id": "http://www.princeton.edu",
-          "@type": "CollegeOrUniversity"
-        },
-        {
-          "@id": "http://www.harvard.edu/",
-          "@type": "CollegeOrUniversity"
-        }
-      ]
-    },
-
-    "roleAffiliation": {
-      "@id": "http://www.princeton.edu",
-      "@type": "CollegeOrUniversity"
-    },
-
-    "sponsor": {
-      "@type": "SponsorRole",
-      "sponsor": {
-        "@type": "Organization"
-      },
-      "roleOffer": {
-        "@type": "FundingSource",
-        "serialNumber": "grantId"
-      },
-      "startDate": "2015-01-01"
-    },
-
-    "roleComment": [
-      {
-        "@type": "Comment",
-        "text": "senior author on this work",
-        "about": {
-          "@type": "CreateAction"
-        }
-      },
-
-      {
-        "@type": "Comment",
-        "text": "wrote the article",
-        "about": {
-          "@type": "WriteAction"
-        }
-      },
-
-      {
-        "@type": "DisclosureStatement",
-        "text": "received personal fees for consulting for: Pfizer Inc - New York, NY, USA.",
-        "about": {
-          "@type": "PayAction",
-          "agent": {
-            "@type": "Corporation",
-            "name": "Pfizer"
-          }
-        }
-      },
-
-      {
-        "@type": "AcknowledgementStatement",
-        "text": "acknowledge the proofreading work of: Bush, Vannevar \"Vannevar Bush\"",
-        "about": {
-          "@type": "ReadAction",
-          "agent": {
-            "@type": "Person",
-            "name": "Vannevar Bush"
-          }
-        }
-      }
-    ]
-  },
-
-  "hasPart": [
-    {
-      "@id": "http://example.com/image",
-      "@type": "Image",
-      "alternateName": "figure 1",
-      "caption": "Growth of X as a function of Y",
-      "encoding": [
-        {
-          "@id": "http://example.com/encodingsmall",
-          "@type": "ImageObject",
-          "contentUrl": "http://example.com/small",
-          "height": "400px",
-          "width": "400px",
-          "isBasedOnUrl": "http://example.com/encodinglarge"
-        },
-        {
-          "@id": "http://example.com/encodinglarge",
-          "@type": "ImageObject",
-          "contentUrl": "http://example.com/large",
-          "height": "1200px",
-          "width": "1200px"
-        }
-      ],
-      "isBasedOnUrl": "http://example.com/code"
-    },
-    {
-      "@id": "http://example.com/code",
-      "@type": "SoftwareSourceCode",
-      "codeRepository": "http://example.com/repository"
-    }
+  "name": "Mojito",
+  "ingredient": [
+    "12 fresh mint leaves",
+    "1/2 lime, juiced with pulp",
+    "1 tablespoons white sugar",
+    "1 cup ice cubes",
+    "2 fluid ounces white rum",
+    "1/2 cup club soda"
   ],
-
-  "sponsor": {
-    "@type": "SponsorRole",
-    "sponsor": {
-      "@type": "Organization"
-    },
-    "roleOffer": {
-      "@type": "FundingSource",
-      "serialNumber": "grantId"
-    },
-    "startDate": "2015-01-01"
-  },
-
-  "isPartOf": {
-    "@id": "issueId",
-    "@type": "PublicationIssue",
-    "issueNumber": 10,
-    "isPartOf": {
-      "@id": "volumeId",
-      "@type": "PublicationVolume",
-      "volumeNumber": 2,
-      "isPartOf": {
-        "@id": "periodicalId",
-        "@type": "Periodical"
-      }
-    }
-  },
-
-  "citation": [
+  "yield": "1 cocktail",
+  "instructions": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "On the effect of X on Y",
-      "author": {
-        "@type": "Person",
-        "givenName": "Peter",
-        "familyName": "Smith",
-        "additionalName": "Jon",
-        "name": "Peter J Smith"
-      },
-      "isPartOf": {
-        "@type": "PublicationIssue",
-        "issueNumber": 4,
-        "isPartOf": {
-          "@type": "PublicationVolume",
-          "volumeNumber": 7,
-          "isPartOf": {
-            "@type": "Periodical",
-            "name": "Journal of metaphysics"
-          }
-        }
-      },
-      "pageStart": "615",
-      "pageEnd": "620",
-      "datePublished": {
-        "@type": "xsd:gYear",
-        "@value": 2015
-      }
+      "step": 1,
+      "description": "Crush lime juice, mint and sugar together in glass."
     },
-
     {
-      "@id": "http://example.com/article",
-      "@type": "Webpage",
-      "name": "How much does 'typesetting' cost?",
-      "author": {
-        "@type": "Person",
-        "givenName": "James",
-        "familyName": "Sullivan",
-        "name": "James Sullivan"
-      },
-      "datePublished": {
-        "@value": "2015-06-11",
-        "@type": "xsd:date"
-      },
-      "potentialAction": {
-        "@type": "ReadAction",
-        "actionStatus": "CompletedActionStatus",
-        "endTime": {
-          "@value": "2015-06-11",
-          "@type": "xsd:date"
-        }
-      }
-    }
-  ],
-
-  "potentialAction": [
-    {
-      "@type": "ReadAction",
-      "expectsAcceptanceOf": {
-        "@type": "Offer",
-        "potentialAction": {
-          "@type": "PayAction",
-          "price": "100USD"
-        }
-      }
+      "step": 2,
+      "description": "Fill glass to top with ice cubes."
     },
-
     {
-      "@type": "ReviewAction",
-      "agent-input": {
-        "@type": "PropertyValueSpecification",
-        "valueRequired": true
-      },
-      "resultReview-input": {
-        "@type": "PropertyValueSpecification",
-        "valueRequired": true
-      },
-      "target": {
-        "@type": "EntryPoint",
-        "httpMethod": "PUT",
-        "urlTemplate": "http://example.com/review"
-      }
+      "step": 3,
+      "description": "Pour white rum over ice."
     },
-
-
     {
-      "@type": "AddAction",
-      "targetCollection": {
-        "@id": "issueId",
-        "@type": "PublicationIssue",
-        "issueNumber": 10,
-        "isPartOf": {
-          "@id": "volumeId",
-          "@type": "PublicationVolume",
-          "volumeNumber": 2,
-          "isPartOf": {
-            "@id": "periodicalId",
-            "@type": "Periodical",
-            "name": "Tiqqun"
-          }
-        }
-      }
+      "step": 4,
+      "description": "Fill the rest of glass with club soda, stir."
+    },
+    {
+      "step": 5,
+      "description": "Garnish with a lime wedge."
     }
   ]
-
 }

@@ -8,12 +8,12 @@
     "prepublish": "npm run build",
     "format": "prettier --single-quote --write \"{src,test}/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "SET NODE_ENV=\"production\" babel src_new/ -d dist/",
+    "build": "NODE_ENV=\"production\" babel src_new/ -d dist/",
     "watch": "watchify example/index.js -dv -o example/bundle.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/science-periodicals/jsonld-vis.git"
+    "url": "git+https://github.com/Sleitnick/jsonld-vis.git"
   },
   "keywords": [
     "JSONLD",
@@ -27,12 +27,9 @@
   "author": "Leon Chen",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/science-periodicals/jsonld-vis/issues"
+    "url": "https://github.com/Sleitnick/jsonld-vis/issues"
   },
-  "homepage": "https://github.com/science-periodicals/jsonld-vis#readme",
-  "eslintConfig": {
-    "extends": "@scipe"
-  },
+  "homepage": "https://github.com/Sleitnick/jsonld-vis#readme",
   "babel": {
     "presets": [
       "es2015"
@@ -49,7 +46,7 @@
     "browserify": "^14.4.0",
     "eslint": "^7.21.0",
     "prettier": "^1.5.3",
-    "watchify": "^3.9.0"
+    "watchify": "^4.0.0"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
